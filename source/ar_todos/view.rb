@@ -1,5 +1,6 @@
 class View
   def menu
+    header
     puts "Select an Option by typing a number:"
     puts "1. Create username"
     puts "2. Select existing username"
@@ -11,6 +12,7 @@ class View
   end
 
   def task_menu
+    header
     puts "Select an Option by pressing a number:"
     puts "1. Create Task"
     puts "2. View Tasks"
@@ -18,6 +20,7 @@ class View
   end
 
   def task_actions
+    header
     puts "Select option by typing a number."
     puts "1. Start Task-time."
     puts "2. Stop Task-time."

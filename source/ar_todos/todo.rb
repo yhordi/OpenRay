@@ -14,6 +14,30 @@ class Controller
     menu
   end
 
+  def clock
+  @text = <<END
+               .--.
+          .-._;.--.;_.-.
+         (_.'_..--.._'._)
+          /.' . 60 . '.\\
+         // .      / . \\\\
+        |; .      /   . |;
+        ||45    ()    15||
+        |; .          . |;
+        \\\\ .          . //
+         \\'._'  30 '_.'//
+      jgs  '-._'--'_.-'
+               `""`
+
+
+END
+  end
+
+  def header
+  puts clock
+  end
+
+
   def menu
     @view.menu
     option = gets.chomp
