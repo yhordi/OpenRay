@@ -14,14 +14,14 @@ class View
     puts "Select an Option by pressing a number:"
     puts "1. Create Task"
     puts "2. View Tasks"
-    puts "3. Exit to main menu"
+    puts "3. Exit to command line"
   end
 
   def task_actions
     puts "Select option by typing a number."
     puts "1. Start Task-time."
     puts "2. Stop Task-time."
-    puts "3. Exit to menu."
+    puts "3. Exit to main menu."
   end
 
   def name_task

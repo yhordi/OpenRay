@@ -27,7 +27,8 @@ class Controller
     when '2'
       User.all.each {|user| p user}
       @view.select_user
-      @user = User.find(gets.chomp)
+      @user_id = gets.chomp.to_i
+      @user = User.find(@user_id)
       task_menu
     when '3'
       return exit
@@ -41,17 +42,19 @@ class Controller
     case task_option
     when '1'
       @view.name_task
-      @task = Task.new
-      @task.update(name: gets.chomp)
+      # @task = Task.new
+      @task = @user.tasks.create(name: gets.chomp)
+      # @task.update(name: gets.chomp)
       @user.tasks << @task
       task_actions
 
     when '2'
-      # @user
-      # @user.tasks
+      User.all
+      Task.find_by(user_id: @user_id)
     when '3'
-      return exit
+      menu
     end
+    task_menu
   end
 
   def task_actions
@@ -65,7 +68,7 @@ class Controller
       when '3'
         task_menu
     end
-
+    menu
   end
 
   def task_start
