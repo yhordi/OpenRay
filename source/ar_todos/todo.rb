@@ -49,8 +49,8 @@ class Controller
       task_actions
 
     when '2'
-      User.all
-      Task.find_by(user_id: @user_id)
+      task = Task.where(user_id: @user_id)
+      @view.display_tasks(task)
     when '3'
       menu
     end

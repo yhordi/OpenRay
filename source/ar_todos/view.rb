@@ -32,5 +32,9 @@ class View
       puts "Select user ID:"
   end
 
+  def display_tasks(task)
+    task.each {|task|p task}
+  end
+
 
 end
