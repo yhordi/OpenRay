@@ -7,6 +7,7 @@ class CreateTask < ActiveRecord::Migration
       t.references :user
       t.datetime :start_time
       t.datetime :end_time
+      t.integer :total_time
     end
   end
 end
